@@ -23,7 +23,7 @@ while True:
 
 #Move existing files into created folders
 for filename in os.listdir(downloads_path): # Loop through the entire Downloads folder
-
+    
     full_path = downloads_path / filename
     if full_path.is_file() and filename.endswith('.pdf'):
         os.makedirs('C:/Users/britt/Downloads/PDFs', exist_ok=True) # Prevents shutil from creating a .file file and overwriting my existing files.
@@ -58,7 +58,7 @@ for filename in os.listdir(downloads_path): # Loop through the entire Downloads 
         print(f'Skipped: {filename} (no matching folder)')
 
 
-# Handles duplicate files
+# Handles duplicate files and unrecognized files.
     file_list = os.listdir(downloads_path)
     allowed_exts = ['.zip', '.png', '.jpg', '.jpeg', '.doc','.docx', '.pdf', '.exe']
 
