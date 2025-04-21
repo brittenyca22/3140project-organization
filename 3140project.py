@@ -70,7 +70,7 @@ for i in range(len(file_list)):
         dupliFile = file_list[j]
         full_path_2 = downloads_path / dupliFile
 
-        ext1 = full_path_1.suffix.lower()
+        ext1 = full_path_1.suffix.lower() # Extracts the file extensions of files in Downloads and deals with capitalization sensitivities.
         ext2 = full_path_2.suffix.lower()
 
         if (
