@@ -66,7 +66,7 @@ for i in range(len(file_list)):
     filename = file_list[i]
     full_path_1 = downloads_path / filename
 
-    for j in range(i + 1, len(file_list)):  # Prevents self-comparison
+    for j in range(i + 1, len(file_list)):  # Prevents self-comparison by iterating through filename
         dupliFile = file_list[j]
         full_path_2 = downloads_path / dupliFile
 
