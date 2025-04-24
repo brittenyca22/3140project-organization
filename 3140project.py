@@ -3,6 +3,8 @@ import os, shutil, send2trash
 
 downloads_path = Path.home() / 'Downloads' # Reference to Downloads folder
 
+
+#This part is pretty much optional, but I am showing you how to create folders using Python
 while True:
 
     # Create the folder
