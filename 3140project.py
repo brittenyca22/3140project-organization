@@ -1,5 +1,7 @@
-from pathlib import Path
-import os, shutil, send2trash
+from pathlib import Path # Offers methods that allows the user to perform tasks using file system paths. 
+import os, shutil, send2trash 
+# os allows you to interacr with the operating system. shutil offers function that allow you to copy, move, rename, and delete files
+# and send2trash allows you to safely delete files.
 
 downloads_path = Path.home() / 'Downloads' # Reference to Downloads folder
 
@@ -80,7 +82,8 @@ for i in range(len(file_list)):
             and full_path_2.is_file()
             and ext1 in allowed_exts # Prevents premission errors for files not specified in allowed_exts
             and ext2 in allowed_exts
-            and full_path_1.read_bytes() == full_path_2.read_bytes()
+            and filename != dupliFile
+            and full_path_1.stat().st_size == full_path_2.stat().st_size
             ):
                 send2trash.send2trash(full_path_2) # Safely delete file if duplicate exists
                 print(f"Duplicate deleted: {dupliFile}")
